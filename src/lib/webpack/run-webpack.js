@@ -4,7 +4,6 @@ import { writeFile } from 'fs.promised';
 import webpack from 'webpack';
 import chalk from 'chalk';
 import getPort from 'get-port';
-import clearConsole from 'console-clear';
 import DevServer from 'webpack-dev-server';
 import clientConfig from './webpack-client-config';
 import serverConfig from './webpack-server-config';
@@ -59,7 +58,6 @@ async function devBuild(env, onprogress) {
 			let serverAddr = `${protocol}://${host}:${chalk.bold(port)}`;
 			let localIpAddr = `${protocol}://${ip.address()}:${chalk.bold(port)}`;
 
-			clearConsole();
 
 			if (stats.hasErrors()) {
 				process.stdout.write(chalk.red('\Build failed!\n\n'));

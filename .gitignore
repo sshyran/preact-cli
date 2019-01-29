@@ -1,5 +1,4 @@
 /node_modules
-/lib
 /examples/*/build
 /tests/output
 .DS_Store
